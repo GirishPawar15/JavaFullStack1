@@ -1,0 +1,27 @@
+package a;
+
+public class Abc {
+	
+	public static <T> boolean check(T []arr ,int A ,int B) {
+		int A=0,B=0;
+		for(T t:arr) {
+			if((int)t==A) {
+				A=1;
+			}
+			if((int)A==B) {
+				B=1;
+			}	
+		}
+		 
+		return B==1&&A==1;
+	}
+	public static void main(String[] args) {
+		Integer arr[]= {10,20,30,40,50};
+		if(Abc.check(arr, 10, 1)) {
+			System.out.println("Both Present");
+		}
+		else {
+			System.out.println("Both are Not Present");
+		}
+	}
+}
